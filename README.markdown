@@ -20,7 +20,7 @@ Here's an example of what `cython_ifdef.py` can process: [gevent/core_.pyx](http
 
 ## Installation
 
-In addition to Cython, you need to have Python and [unifdef](http://dotat.at/prog/unifdef/) installed in order to run this script. On Debian/Ubuntu, do `apt-get install unifdef`.
+In addition to Cython, you need to have [unifdef](http://dotat.at/prog/unifdef/) installed in order to run this script. On Debian/Ubuntu, do `apt-get install unifdef`.
 
 [Download the script from github](https://raw.github.com/denik/cython-ifdef/master/cython_ifdef.py) and put it somewhere on the run path.
 
