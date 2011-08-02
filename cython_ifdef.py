@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # Copyright (C) 2011 Denis Bilenko (http://denisbilenko.com)
-# Homepage: http://github.com/denik/cython-ifdef 
+# Homepage: http://github.com/denik/cython-ifdef
 import sys
 import os
 import datetime
