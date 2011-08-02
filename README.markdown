@@ -28,8 +28,8 @@ In addition to Cython, you need to have Python and [unifdef](http://dotat.at/pro
 
 * It gets lists of all preprocessor symbols used in the source file using `unifdef -t -s`
 * It runs `unifdef` for all possible configurations on the original source.
-* For generated source, it runs `cython` and stores the result in memory.
-* It then merges all the resulting .c files into one with appropriate #ifdef back in place.
+* For each generated source, it runs `cython` and stores the result in memory.
+* It then merges all the resulting .c files into one with the appropriate #ifdef in place.
 
 ## Limitations
 
@@ -37,7 +37,7 @@ In addition to Cython, you need to have Python and [unifdef](http://dotat.at/pro
 * It does not look into included .pxi.
 * The amount of time it takes is exponential: 2^(Number of symbols), so it does not support arbitrary amount of preprocessor symbols.
 
-It was written to support [gevent's](http://gevent.org) use case, rather than a generic tool, so be warned.
+It was written to support [gevent's](http://gevent.org) use case rather than a generic tool, so be warned.
 
 ## Author
 
