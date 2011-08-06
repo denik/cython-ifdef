@@ -395,7 +395,7 @@ def main():
 
     try:
         for key in iter_configurations(symbols):
-            system_unifdef('unifdef -t -b %s -o %s %s' % (key, options.sourcefile, tmpname))
+            system_unifdef('unifdef -t -b %s %s > %s' % (key, tmpname, options.sourcefile))
             system('cython %s -o %s %s' % (options.cython_args, options.output, options.sourcefile))
             convert_comments(options.output, today)
             sources.append(Source(open(options.output).read(), key))
