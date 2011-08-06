@@ -115,6 +115,10 @@ def convert_comments(filename, today):
 
     in_comment = False
     for line in input:
+
+        if line.endswith('\n'):
+            line = line[:-1].rstrip() + '\n'
+
         if in_comment:
             if '*/' in line:
                 in_comment = False
@@ -123,6 +127,7 @@ def convert_comments(filename, today):
                 output.write(line.replace('\n', newline_token))
         else:
             if line.lstrip().startswith('/* ') and '*/' not in line:
+                line = line.lstrip()  # cython adds space before /* for some reason
                 line = line.replace('\n', newline_token)
                 output.write(line)
                 in_comment = True
